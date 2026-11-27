@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return { title: "Article not found", robots: { index: false, follow: false } };
   const publicArticle = isPublicArticle(article);
   const url = `${site.url}/article/${article.slug}`;
-  return { title: article.seoTitle ?? article.title, description: article.seoDescription ?? article.dek, alternates: { canonical: url }, robots: { index: publicArticle, follow: true, maxImagePreview: "large" }, openGraph: { type: "article", url, title: article.title, description: article.dek, publishedTime: article.publishedAt.toISOString(), modifiedTime: article.updatedAt.toISOString(), authors: [article.writtenBy.name], images: [{ url: article.heroImageUrl, width: 1600, height: 900, alt: article.heroImageAlt }] }, twitter: { card: "summary_large_image", title: article.title, description: article.dek, images: [article.heroImageUrl] } };
+  return { title: article.seoTitle ?? article.title, description: article.seoDescription ?? article.dek, alternates: { canonical: url }, robots: { index: publicArticle, follow: true, "max-image-preview": "large" }, openGraph: { type: "article", url, title: article.title, description: article.dek, publishedTime: article.publishedAt.toISOString(), modifiedTime: article.updatedAt.toISOString(), authors: [article.writtenBy.name], images: [{ url: article.heroImageUrl, width: 1600, height: 900, alt: article.heroImageAlt }] }, twitter: { card: "summary_large_image", title: article.title, description: article.dek, images: [article.heroImageUrl] } };
 }
 
 export default async function ArticlePage({ params }: Props) {

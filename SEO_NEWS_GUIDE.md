@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    maxImagePreview: "large",
+    "max-image-preview": "large",
   },
 };
 ```
@@ -90,7 +90,7 @@ export function generateMetadata({ article }: { article: Article }): Metadata {
     robots: {
       index: isPublic,
       follow: true,
-      maxImagePreview: "large",
+      "max-image-preview": "large",
     },
     openGraph: {
       type: "article",
