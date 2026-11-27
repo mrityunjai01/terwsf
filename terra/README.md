@@ -39,3 +39,13 @@ The GitHub connection requires the Vercel GitHub integration to be installed. DN
 4. Deploy through the connected Vercel Git repository.
 
 For a team account, set `vercel_team_id` and keep it consistent for all Vercel resources.
+
+## Git pre-push verification
+
+The repository includes a versioned `.githooks/pre-push` hook. Enable it once from the repository root:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Every push will then run `npm run verify`, which checks Prettier formatting, ESLint, TypeScript, and the Next.js production build.

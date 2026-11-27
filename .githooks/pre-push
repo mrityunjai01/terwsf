@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+echo "Running formatting, lint, and production build before push..."
+npm run verify

@@ -25,6 +25,23 @@ npm run dev
 
 Open <http://localhost:3000>. The public site and admin dashboard intentionally contain no demo content. Connect the repository in `src/lib/articles.ts` to PostgreSQL through Drizzle before adding real articles. `src/db/schema.ts` and `src/db/client.ts` are ready for that integration.
 
+## Code quality and push checks
+
+```bash
+npm run format        # format source files with Prettier
+npm run format:check  # verify formatting
+npm run lint          # run ESLint and Next.js Core Web Vitals rules
+npm run verify        # formatting, lint, and production build
+```
+
+Enable the versioned pre-push hook once:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+After that, a push runs the full verification command before Git sends commits to the upstream repository.
+
 ## Environment variables
 
 `.env.example` contains placeholders only. Never commit `.env.local`, production credentials, or real connection strings.
