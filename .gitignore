@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+/.pnp/
+.pnp.*
+
+# Next.js
+.next/
+/out/
+/build/
+
+# Production builds
+dist/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Vercel
+.vercel/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+crash.log
+crash.*.log
+
+# Drizzle local artifacts
+drizzle/meta/_journal.json
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Local caches
+.cache/
+.turbo/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+# Editor files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.swp
+*.swo
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

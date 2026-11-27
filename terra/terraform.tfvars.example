@@ -1,0 +1,11 @@
+project_name       = "finance-news"
+production_branch  = "main"
+site_url           = "https://news.example.com"
+database_url       = "postgresql://postgres.PROJECT_REF:PASSWORD@POOLER_HOST:6543/postgres?sslmode=require"
+github_repository  = "YOUR_GITHUB_OWNER/YOUR_REPOSITORY"
+production_domain  = "news.example.com"
+
+# Set the token outside this file:
+# export VERCEL_API_TOKEN="..."
+# Optional for a Vercel team:
+# vercel_team_id = "team_..."

@@ -1,0 +1,1 @@
+../breaking-news-main-goal.md
